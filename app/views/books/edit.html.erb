@@ -1,0 +1,15 @@
+<h2>Editing Book</h2>
+
+<%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
+
+<p>Title</p>
+<%= f.text_field :title %>
+
+
+
+<p>Opinion</p>
+<%= f.text_area :body %>
+<br>
+<%= f.submit 'Update User', class: "btn btn-secondary" %>
+
+<% end %>
