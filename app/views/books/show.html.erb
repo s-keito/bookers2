@@ -1,16 +1,21 @@
+
+  <% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+   <% end %>
 <div class="container">
 <div class="row">
   <div class="col-lg-3">
-    <%= render 'users/list', book: @book %>
+    <%= render 'users/list', book: @book,user: @book.user %>
   </div>
-  
+
     <div class="col lg 13" >
       <h1>Book details</h1>
-
    <table class="table table-striped">
     <tr>
     <td>
-      <%= image_tag @user_image.get_user_image %>
+      <%= image_tag @user_image.get_profile_image(50,50) %>
       <br>
       <a><%= link_to @user_image.name, user_path(@user_image.id) %></a>
     </td>
