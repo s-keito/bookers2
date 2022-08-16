@@ -1,6 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
+
 <h2>Editing Book</h2>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました
+  <%= @book.errors.count %>errors prohibited this obj from being saved:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -17,6 +22,13 @@
 <p>Opinion</p>
 <%= f.text_area :body %>
 <br>
-<%= f.submit 'Update User', class: "btn btn-secondary" %>
+<%= f.submit 'Update Book', class: "btn btn-secondary" %>
 
 <% end %>
+
+<%= link_to "Show", book_path(@book.id) %>
+|
+<%= link_to "Back", books_path %>
+</div>
+</div>
+</div>

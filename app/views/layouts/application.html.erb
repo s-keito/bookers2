@@ -45,7 +45,7 @@
 
           <li>
              <%= link_to destroy_user_session_path, method: :delete,class: 'nav-link text-light' do %>
-              <i class="fas fa-sign-out-alt"></i>Log out 
+              <i class="fas fa-sign-out-alt"></i>Log out
              <% end %>
 　　　　　</li>
 
@@ -93,8 +93,13 @@
 
    </div>
   </nav>
+
+  <main>
+  
+
   <%= yield %>
- </body>
+
+  </main>
 
    <footer>
     <div class="container mt-5">
@@ -103,8 +108,9 @@
     		<p>CopyRight Infratop.inc</p>
     	</div>
     </div>
-  </div>
+   </div>
    </footer>
+</body>
 
 </html>
 
